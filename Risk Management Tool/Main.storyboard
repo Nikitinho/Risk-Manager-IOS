@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -182,7 +181,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OsA-iS-3kY"/>
+        <segue reference="naj-OX-x3t"/>
         <segue reference="i87-F7-PiQ"/>
     </inferredMetricsTieBreakers>
 </document>

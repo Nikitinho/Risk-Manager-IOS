@@ -7,21 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		747D8706223E8FCA0066F56D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747D8705223E8FCA0066F56D /* AppDelegate.swift */; };
-		747D8708223E8FCA0066F56D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747D8707223E8FCA0066F56D /* ViewController.swift */; };
-		747D870B223E8FCA0066F56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 747D8709223E8FCA0066F56D /* Main.storyboard */; };
-		747D870D223E8FCC0066F56D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747D870C223E8FCC0066F56D /* Assets.xcassets */; };
-		747D8710223E8FCC0066F56D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 747D870E223E8FCC0066F56D /* LaunchScreen.storyboard */; };
+		7444D9CD224041BB006E1638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7444D9C4224041BA006E1638 /* Assets.xcassets */; };
+		7444D9CF224041BB006E1638 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7444D9C6224041BA006E1638 /* GoogleService-Info.plist */; };
+		7444D9D0224041BB006E1638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444D9C7224041BA006E1638 /* AppDelegate.swift */; };
+		7444D9D1224041BB006E1638 /* LogInRMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444D9C8224041BA006E1638 /* LogInRMVC.swift */; };
+		7444D9D2224041BB006E1638 /* RegisterRMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444D9C9224041BA006E1638 /* RegisterRMVCViewController.swift */; };
+		7444D9D3224041BB006E1638 /* LogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444D9CA224041BB006E1638 /* LogMessage.swift */; };
+		7444D9D4224041BB006E1638 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7444D9CB224041BB006E1638 /* Info.plist */; };
+		7444D9D5224041BB006E1638 /* LogOutRMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444D9CC224041BB006E1638 /* LogOutRMVC.swift */; };
+		7444D9D822404522006E1638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7444D9D7224044B6006E1638 /* Main.storyboard */; };
+		7444D9D922404529006E1638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7444D9D6224044B3006E1638 /* LaunchScreen.storyboard */; };
+		E09974D0EF197405D67DC69D /* Pods_Risk_Management_Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1338F2D2861A87E4FD6C99BC /* Pods_Risk_Management_Tool.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1338F2D2861A87E4FD6C99BC /* Pods_Risk_Management_Tool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Risk_Management_Tool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7444D9C4224041BA006E1638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7444D9C6224041BA006E1638 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7444D9C7224041BA006E1638 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7444D9C8224041BA006E1638 /* LogInRMVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInRMVC.swift; sourceTree = "<group>"; };
+		7444D9C9224041BA006E1638 /* RegisterRMVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRMVCViewController.swift; sourceTree = "<group>"; };
+		7444D9CA224041BB006E1638 /* LogMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMessage.swift; sourceTree = "<group>"; };
+		7444D9CB224041BB006E1638 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7444D9CC224041BB006E1638 /* LogOutRMVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutRMVC.swift; sourceTree = "<group>"; };
+		7444D9D6224044B3006E1638 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7444D9D7224044B6006E1638 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		747D8702223E8FCA0066F56D /* Risk Management Tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Risk Management Tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		747D8705223E8FCA0066F56D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		747D8707223E8FCA0066F56D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		747D870A223E8FCA0066F56D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		747D870C223E8FCC0066F56D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		747D870F223E8FCC0066F56D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		747D8711223E8FCC0066F56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86072A3C18DB8600134F2B85 /* Pods-Risk Management Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Risk Management Tool.release.xcconfig"; path = "Target Support Files/Pods-Risk Management Tool/Pods-Risk Management Tool.release.xcconfig"; sourceTree = "<group>"; };
+		A037FE266418DFD96965AD18 /* Pods-Risk Management Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Risk Management Tool.debug.xcconfig"; path = "Target Support Files/Pods-Risk Management Tool/Pods-Risk Management Tool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E09974D0EF197405D67DC69D /* Pods_Risk_Management_Tool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,8 @@
 			children = (
 				747D8704223E8FCA0066F56D /* Risk Management Tool */,
 				747D8703223E8FCA0066F56D /* Products */,
+				82F8520C4CD73F32B9697467 /* Pods */,
+				BF2A572D5A75E80B773CCF42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +70,35 @@
 		747D8704223E8FCA0066F56D /* Risk Management Tool */ = {
 			isa = PBXGroup;
 			children = (
-				747D8705223E8FCA0066F56D /* AppDelegate.swift */,
-				747D8707223E8FCA0066F56D /* ViewController.swift */,
-				747D8709223E8FCA0066F56D /* Main.storyboard */,
-				747D870C223E8FCC0066F56D /* Assets.xcassets */,
-				747D870E223E8FCC0066F56D /* LaunchScreen.storyboard */,
-				747D8711223E8FCC0066F56D /* Info.plist */,
+				7444D9C7224041BA006E1638 /* AppDelegate.swift */,
+				7444D9C4224041BA006E1638 /* Assets.xcassets */,
+				7444D9D6224044B3006E1638 /* LaunchScreen.storyboard */,
+				7444D9D7224044B6006E1638 /* Main.storyboard */,
+				7444D9C6224041BA006E1638 /* GoogleService-Info.plist */,
+				7444D9CB224041BB006E1638 /* Info.plist */,
+				7444D9C8224041BA006E1638 /* LogInRMVC.swift */,
+				7444D9CA224041BB006E1638 /* LogMessage.swift */,
+				7444D9CC224041BB006E1638 /* LogOutRMVC.swift */,
+				7444D9C9224041BA006E1638 /* RegisterRMVCViewController.swift */,
 			);
 			path = "Risk Management Tool";
+			sourceTree = "<group>";
+		};
+		82F8520C4CD73F32B9697467 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A037FE266418DFD96965AD18 /* Pods-Risk Management Tool.debug.xcconfig */,
+				86072A3C18DB8600134F2B85 /* Pods-Risk Management Tool.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF2A572D5A75E80B773CCF42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1338F2D2861A87E4FD6C99BC /* Pods_Risk_Management_Tool.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 747D8714223E8FCC0066F56D /* Build configuration list for PBXNativeTarget "Risk Management Tool" */;
 			buildPhases = (
+				8F1BBC0F334D5E2F3604772A /* [CP] Check Pods Manifest.lock */,
 				747D86FE223E8FCA0066F56D /* Sources */,
 				747D86FF223E8FCA0066F56D /* Frameworks */,
 				747D8700223E8FCA0066F56D /* Resources */,
+				003AF1CA4D2AD344C2E92FDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +135,7 @@
 				TargetAttributes = {
 					747D8701223E8FCA0066F56D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -122,44 +162,79 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				747D8710223E8FCC0066F56D /* LaunchScreen.storyboard in Resources */,
-				747D870D223E8FCC0066F56D /* Assets.xcassets in Resources */,
-				747D870B223E8FCA0066F56D /* Main.storyboard in Resources */,
+				7444D9D4224041BB006E1638 /* Info.plist in Resources */,
+				7444D9CD224041BB006E1638 /* Assets.xcassets in Resources */,
+				7444D9CF224041BB006E1638 /* GoogleService-Info.plist in Resources */,
+				7444D9D922404529006E1638 /* LaunchScreen.storyboard in Resources */,
+				7444D9D822404522006E1638 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		003AF1CA4D2AD344C2E92FDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Risk Management Tool/Pods-Risk Management Tool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Risk Management Tool/Pods-Risk Management Tool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F1BBC0F334D5E2F3604772A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Risk Management Tool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		747D86FE223E8FCA0066F56D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				747D8708223E8FCA0066F56D /* ViewController.swift in Sources */,
-				747D8706223E8FCA0066F56D /* AppDelegate.swift in Sources */,
+				7444D9D5224041BB006E1638 /* LogOutRMVC.swift in Sources */,
+				7444D9D0224041BB006E1638 /* AppDelegate.swift in Sources */,
+				7444D9D2224041BB006E1638 /* RegisterRMVCViewController.swift in Sources */,
+				7444D9D3224041BB006E1638 /* LogMessage.swift in Sources */,
+				7444D9D1224041BB006E1638 /* LogInRMVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		747D8709223E8FCA0066F56D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				747D870A223E8FCA0066F56D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		747D870E223E8FCC0066F56D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				747D870F223E8FCC0066F56D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		747D8712223E8FCC0066F56D /* Debug */ = {
@@ -280,8 +355,10 @@
 		};
 		747D8715223E8FCC0066F56D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A037FE266418DFD96965AD18 /* Pods-Risk Management Tool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZV35Z5ER7;
 				INFOPLIST_FILE = "Risk Management Tool/Info.plist";
@@ -291,6 +368,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Risk-Management-Tool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,8 +376,10 @@
 		};
 		747D8716223E8FCC0066F56D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86072A3C18DB8600134F2B85 /* Pods-Risk Management Tool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZV35Z5ER7;
 				INFOPLIST_FILE = "Risk Management Tool/Info.plist";

@@ -1,5 +1,9 @@
 Risk Management Tool/GoogleService-Info.plist
 
+*xcworkspace/xcuserdata/*
+*/xcuserdata/*
+*.xcuserdata
+
 
 ZipBuilder/Packages
 ZipBuilder/*.xcodeproj
