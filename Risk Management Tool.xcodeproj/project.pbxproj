@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		740828C522456EA4008EDFBF /* RiskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740828C322456EA4008EDFBF /* RiskTableViewCell.swift */; };
+		740828C622456EA4008EDFBF /* RiskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740828C422456EA4008EDFBF /* RiskTableViewCell.xib */; };
+		740828C922457D77008EDFBF /* Risk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740828C822457D77008EDFBF /* Risk.swift */; };
 		7444D9CD224041BB006E1638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7444D9C4224041BA006E1638 /* Assets.xcassets */; };
 		7444D9CF224041BB006E1638 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7444D9C6224041BA006E1638 /* GoogleService-Info.plist */; };
 		7444D9D0224041BB006E1638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444D9C7224041BA006E1638 /* AppDelegate.swift */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		1338F2D2861A87E4FD6C99BC /* Pods_Risk_Management_Tool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Risk_Management_Tool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		740828C322456EA4008EDFBF /* RiskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskTableViewCell.swift; sourceTree = "<group>"; };
+		740828C422456EA4008EDFBF /* RiskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiskTableViewCell.xib; sourceTree = "<group>"; };
+		740828C822457D77008EDFBF /* Risk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Risk.swift; sourceTree = "<group>"; };
 		7444D9C4224041BA006E1638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7444D9C6224041BA006E1638 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7444D9C7224041BA006E1638 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		740828C722457D63008EDFBF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				740828C822457D77008EDFBF /* Risk.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		747D86F9223E8FCA0066F56D = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +93,10 @@
 				7444D9C8224041BA006E1638 /* LogInRMVC.swift */,
 				7444D9CA224041BB006E1638 /* LogMessage.swift */,
 				7444D9CC224041BB006E1638 /* LogOutRMVC.swift */,
+				740828C722457D63008EDFBF /* Domain */,
 				7444D9C9224041BA006E1638 /* RegisterRMVCViewController.swift */,
+				740828C322456EA4008EDFBF /* RiskTableViewCell.swift */,
+				740828C422456EA4008EDFBF /* RiskTableViewCell.xib */,
 			);
 			path = "Risk Management Tool";
 			sourceTree = "<group>";
@@ -164,6 +181,7 @@
 			files = (
 				7444D9D4224041BB006E1638 /* Info.plist in Resources */,
 				7444D9CD224041BB006E1638 /* Assets.xcassets in Resources */,
+				740828C622456EA4008EDFBF /* RiskTableViewCell.xib in Resources */,
 				7444D9CF224041BB006E1638 /* GoogleService-Info.plist in Resources */,
 				7444D9D922404529006E1638 /* LaunchScreen.storyboard in Resources */,
 				7444D9D822404522006E1638 /* Main.storyboard in Resources */,
@@ -226,11 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740828C522456EA4008EDFBF /* RiskTableViewCell.swift in Sources */,
 				7444D9D5224041BB006E1638 /* LogOutRMVC.swift in Sources */,
 				7444D9D0224041BB006E1638 /* AppDelegate.swift in Sources */,
 				7444D9D2224041BB006E1638 /* RegisterRMVCViewController.swift in Sources */,
 				7444D9D3224041BB006E1638 /* LogMessage.swift in Sources */,
 				7444D9D1224041BB006E1638 /* LogInRMVC.swift in Sources */,
+				740828C922457D77008EDFBF /* Risk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

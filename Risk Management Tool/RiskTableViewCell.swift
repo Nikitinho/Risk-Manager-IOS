@@ -1,0 +1,31 @@
+//
+//  RiskTableViewCell.swift
+//  Risk Management Tool
+//
+//  Created by Nikitinho on 22/03/2019.
+//  Copyright © 2019 Nikitinho. All rights reserved.
+//
+
+import UIKit
+
+class RiskTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var riskTimestamp: UILabel!
+    @IBOutlet weak var riskDescription: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    func set(risk:Risk) {
+        userName.text = risk.author
+        riskDescription.text = risk.description
+    }
+}

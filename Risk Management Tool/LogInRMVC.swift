@@ -30,10 +30,6 @@ class LogInRMVC: UIViewController {
                 LogMessage.showMessage(inVC: self, title: "Error", message: error!.localizedDescription)
                 return
             }
-            guard let user = user else { return }
-            print(user.email ?? "Email info is missing")
-            print(user.displayName ?? "Display name is missing")
-            print(user.uid)
             
             self.performSegue(withIdentifier: "logInSegue", sender: nil)
         })
