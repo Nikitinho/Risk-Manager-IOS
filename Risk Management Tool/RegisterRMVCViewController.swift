@@ -38,11 +38,7 @@ class RegisterRMVCViewController: UIViewController {
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
         
-        userImage.layer.borderWidth = 1
-        userImage.layer.masksToBounds = false
-        userImage.layer.borderColor = UIColor.black.cgColor
-        userImage.layer.cornerRadius = userImage.frame.height/2
-        userImage.clipsToBounds = true
+        userImage.createRoundedImageForm()
     }
     
     @IBAction func onRegisterAction(_ sender: Any) {

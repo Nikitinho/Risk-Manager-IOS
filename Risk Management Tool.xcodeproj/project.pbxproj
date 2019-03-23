@@ -23,6 +23,7 @@
 		7481E144224637EB009D2392 /* NewRiskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481E143224637EB009D2392 /* NewRiskVC.swift */; };
 		7481E14822463E7E009D2392 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481E14722463E7E009D2392 /* UserProfile.swift */; };
 		7481E14A22463ECD009D2392 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481E14922463ECD009D2392 /* UserService.swift */; };
+		7481E14C22465B54009D2392 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481E14B22465B54009D2392 /* ImageService.swift */; };
 		E09974D0EF197405D67DC69D /* Pods_Risk_Management_Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1338F2D2861A87E4FD6C99BC /* Pods_Risk_Management_Tool.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		7481E143224637EB009D2392 /* NewRiskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRiskVC.swift; sourceTree = "<group>"; };
 		7481E14722463E7E009D2392 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		7481E14922463ECD009D2392 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		7481E14B22465B54009D2392 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		86072A3C18DB8600134F2B85 /* Pods-Risk Management Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Risk Management Tool.release.xcconfig"; path = "Target Support Files/Pods-Risk Management Tool/Pods-Risk Management Tool.release.xcconfig"; sourceTree = "<group>"; };
 		A037FE266418DFD96965AD18 /* Pods-Risk Management Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Risk Management Tool.debug.xcconfig"; path = "Target Support Files/Pods-Risk Management Tool/Pods-Risk Management Tool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 		747D8704223E8FCA0066F56D /* Risk Management Tool */ = {
 			isa = PBXGroup;
 			children = (
+				7481E14D22465DE7009D2392 /* Services */,
 				7481E143224637EB009D2392 /* NewRiskVC.swift */,
 				7444D9C7224041BA006E1638 /* AppDelegate.swift */,
 				7444D9C4224041BA006E1638 /* Assets.xcassets */,
@@ -105,9 +108,17 @@
 				7444D9C9224041BA006E1638 /* RegisterRMVCViewController.swift */,
 				740828C322456EA4008EDFBF /* RiskTableViewCell.swift */,
 				740828C422456EA4008EDFBF /* RiskTableViewCell.xib */,
-				7481E14922463ECD009D2392 /* UserService.swift */,
 			);
 			path = "Risk Management Tool";
+			sourceTree = "<group>";
+		};
+		7481E14D22465DE7009D2392 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7481E14922463ECD009D2392 /* UserService.swift */,
+				7481E14B22465B54009D2392 /* ImageService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		82F8520C4CD73F32B9697467 /* Pods */ = {
@@ -261,6 +272,7 @@
 				7444D9D1224041BB006E1638 /* LogInRMVC.swift in Sources */,
 				7481E14A22463ECD009D2392 /* UserService.swift in Sources */,
 				7481E144224637EB009D2392 /* NewRiskVC.swift in Sources */,
+				7481E14C22465B54009D2392 /* ImageService.swift in Sources */,
 				740828C922457D77008EDFBF /* Risk.swift in Sources */,
 				7481E14822463E7E009D2392 /* UserProfile.swift in Sources */,
 			);

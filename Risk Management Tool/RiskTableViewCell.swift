@@ -19,11 +19,7 @@ class RiskTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        userImage.layer.borderWidth = 1
-        userImage.layer.masksToBounds = false
-        userImage.layer.borderColor = UIColor.black.cgColor
-        userImage.layer.cornerRadius = userImage.frame.height/2
-        userImage.clipsToBounds = true
+        userImage.createRoundedImageForm()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,6 +27,10 @@ class RiskTableViewCell: UITableViewCell {
     }
     
     func set(risk:Risk) {
+        ImageService.getImage(url: risk.author.photoURL) { image in
+            self.userImage.image = image
+        }
+        
         userName.text = risk.author.username
         riskDescription.text = risk.description
     }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class UserProfile {
     var uid:String
@@ -17,5 +18,15 @@ class UserProfile {
         self.uid = uid
         self.username = username
         self.photoURL = photoURL
+    }
+}
+
+public extension UIImageView {
+    func createRoundedImageForm() {
+        self.layer.borderWidth = 1
+        self.layer.masksToBounds = false
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = self.frame.height/2
+        self.clipsToBounds = true
     }
 }
