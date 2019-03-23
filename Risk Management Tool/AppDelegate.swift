@@ -19,6 +19,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FIRApp.configure()
+        
+//         needed until log out button not added
+//        do{
+//            try FIRAuth.auth()?.signOut()
+//        } catch {
+//            print (error)
+//        }
+        
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let controller = (user != nil)
+                ? storyboard.instantiateViewController(withIdentifier: "MainBarController") as! UITabBarController
+                : storyboard.instantiateViewController(withIdentifier: "LogInRMVC")
+            
+            self.window?.rootViewController = controller
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

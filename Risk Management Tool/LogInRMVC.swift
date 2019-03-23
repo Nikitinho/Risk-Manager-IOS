@@ -30,8 +30,6 @@ class LogInRMVC: UIViewController {
                 LogMessage.showMessage(inVC: self, title: "Error", message: error!.localizedDescription)
                 return
             }
-            
-            self.performSegue(withIdentifier: "logInSegue", sender: nil)
         })
     }
 }

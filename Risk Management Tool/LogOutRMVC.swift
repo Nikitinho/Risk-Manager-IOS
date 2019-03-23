@@ -47,7 +47,6 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func onLogOutAction(_ sender: Any) {
         do{
             try FIRAuth.auth()?.signOut()
-            performSegue(withIdentifier: "logOutSegue", sender: nil)
         } catch {
             print (error)
         }

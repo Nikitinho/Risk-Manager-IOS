@@ -87,8 +87,6 @@ class RegisterRMVCViewController: UIViewController {
                             return
                         }
                     }
-                    
-                    self.performSegue(withIdentifier: "registerSegue", sender: nil)
                 })
             }
         })
