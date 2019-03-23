@@ -12,6 +12,8 @@ import Firebase
 
 class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var logOutButton: UIBarButtonItem!
+    
     var tableView:UITableView!
     
     var risks = [Risk]()
@@ -20,6 +22,9 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
 
         risks = fillTestParams()
+        
+        logOutButton.target = self;
+        logOutButton.action = #selector(self.onLogOutAction(_sender:))
         
         tableView = UITableView(frame: view.bounds, style: .plain)
         
@@ -44,7 +49,8 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    @IBAction func onLogOutAction(_ sender: Any) {
+    @objc func onLogOutAction(_sender:UIButton!)
+    {
         do{
             try FIRAuth.auth()?.signOut()
         } catch {

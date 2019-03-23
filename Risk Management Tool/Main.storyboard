@@ -154,7 +154,7 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="887.40629685157433"/>
         </scene>
-        <!--Home-->
+        <!--Risks-->
         <scene sceneID="Y6x-ms-qcn">
             <objects>
                 <viewController id="FEX-eq-ski" customClass="LogOutRMVC" customModule="Risk_Management_Tool" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,9 +168,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="gfg-OS-y3d"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="ZOR-g5-c3v">
+                    <navigationItem key="navigationItem" title="Risks" id="ZOR-g5-c3v">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="JFz-20-s87"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="logOutButton" destination="JFz-20-s87" id="lNe-e1-t4S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUU-S5-2gX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
