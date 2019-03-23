@@ -123,10 +123,9 @@ class RegisterRMVCViewController: UIViewController {
         
         storageRef.put(imageData, metadata: metaData) { metaData, error in
             if error == nil, metaData != nil {
-                if let url = metaData?.downloadURL() {
+                
+                storageRef.downloadURL { url, error in
                     completion(url)
-                } else {
-                    completion(nil)
                 }
             } else {
                 completion(nil)

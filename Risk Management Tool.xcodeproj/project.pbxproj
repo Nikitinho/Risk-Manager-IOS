@@ -24,6 +24,7 @@
 		7481E14822463E7E009D2392 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481E14722463E7E009D2392 /* UserProfile.swift */; };
 		7481E14A22463ECD009D2392 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481E14922463ECD009D2392 /* UserService.swift */; };
 		7481E14C22465B54009D2392 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481E14B22465B54009D2392 /* ImageService.swift */; };
+		7493F59A2246AED5007F6CD1 /* Constatnts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7493F5992246AED5007F6CD1 /* Constatnts.swift */; };
 		E09974D0EF197405D67DC69D /* Pods_Risk_Management_Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1338F2D2861A87E4FD6C99BC /* Pods_Risk_Management_Tool.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		7481E14722463E7E009D2392 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		7481E14922463ECD009D2392 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		7481E14B22465B54009D2392 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		7493F5992246AED5007F6CD1 /* Constatnts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constatnts.swift; sourceTree = "<group>"; };
 		86072A3C18DB8600134F2B85 /* Pods-Risk Management Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Risk Management Tool.release.xcconfig"; path = "Target Support Files/Pods-Risk Management Tool/Pods-Risk Management Tool.release.xcconfig"; sourceTree = "<group>"; };
 		A037FE266418DFD96965AD18 /* Pods-Risk Management Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Risk Management Tool.debug.xcconfig"; path = "Target Support Files/Pods-Risk Management Tool/Pods-Risk Management Tool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 			children = (
 				740828C822457D77008EDFBF /* Risk.swift */,
 				7481E14722463E7E009D2392 /* UserProfile.swift */,
+				7493F5992246AED5007F6CD1 /* Constatnts.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				7444D9D5224041BB006E1638 /* LogOutRMVC.swift in Sources */,
 				7444D9D0224041BB006E1638 /* AppDelegate.swift in Sources */,
 				7444D9D2224041BB006E1638 /* RegisterRMVCViewController.swift in Sources */,
+				7493F59A2246AED5007F6CD1 /* Constatnts.swift in Sources */,
 				7444D9D3224041BB006E1638 /* LogMessage.swift in Sources */,
 				7444D9D1224041BB006E1638 /* LogInRMVC.swift in Sources */,
 				7481E14A22463ECD009D2392 /* UserService.swift in Sources */,

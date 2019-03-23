@@ -13,7 +13,7 @@ class ImageService {
     
     static let cache = NSCache<NSString, UIImage>()
     
-    static func downloadImage(url:URL, completion: @escaping (_ image:UIImage?)->()) {
+    static func downloadImage(url:URL, completion: @escaping (_ image:UIImage?, _ url:URL)->()) {
         let dataTask = URLSession.shared.dataTask(with: url) { data, responseURL, error in
             var image:UIImage?
             
@@ -26,7 +26,7 @@ class ImageService {
             }
             
             DispatchQueue.main.async {
-                completion(image)
+                completion(image, url)
             }
             
         }
@@ -34,9 +34,9 @@ class ImageService {
         dataTask.resume()
     }
     
-    static func getImage(url:URL, completion: @escaping (_ image:UIImage?)->()) {
+    static func getImage(url:URL, completion: @escaping (_ image:UIImage?, _ url:URL)->()) {
         if let image = cache.object(forKey: url.absoluteString as NSString) {
-            completion(image)
+            completion(image, url)
         } else {
             downloadImage(url: url, completion: completion)
         }
