@@ -14,6 +14,7 @@ import Firebase
 
 class RegisterRMVCViewController: UIViewController {
     
+    @IBOutlet var viewT: UIView!
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userPassword: UITextField!

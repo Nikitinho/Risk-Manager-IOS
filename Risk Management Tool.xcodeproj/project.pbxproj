@@ -93,19 +93,16 @@
 		747D8704223E8FCA0066F56D /* Risk Management Tool */ = {
 			isa = PBXGroup;
 			children = (
+				7481E1502246611A009D2392 /* Controllers */,
 				7481E14D22465DE7009D2392 /* Services */,
-				7481E143224637EB009D2392 /* NewRiskVC.swift */,
 				7444D9C7224041BA006E1638 /* AppDelegate.swift */,
 				7444D9C4224041BA006E1638 /* Assets.xcassets */,
 				7444D9D6224044B3006E1638 /* LaunchScreen.storyboard */,
 				7444D9D7224044B6006E1638 /* Main.storyboard */,
 				7444D9C6224041BA006E1638 /* GoogleService-Info.plist */,
 				7444D9CB224041BB006E1638 /* Info.plist */,
-				7444D9C8224041BA006E1638 /* LogInRMVC.swift */,
 				7444D9CA224041BB006E1638 /* LogMessage.swift */,
-				7444D9CC224041BB006E1638 /* LogOutRMVC.swift */,
 				740828C722457D63008EDFBF /* Domain */,
-				7444D9C9224041BA006E1638 /* RegisterRMVCViewController.swift */,
 				740828C322456EA4008EDFBF /* RiskTableViewCell.swift */,
 				740828C422456EA4008EDFBF /* RiskTableViewCell.xib */,
 			);
@@ -119,6 +116,17 @@
 				7481E14B22465B54009D2392 /* ImageService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7481E1502246611A009D2392 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7481E143224637EB009D2392 /* NewRiskVC.swift */,
+				7444D9C8224041BA006E1638 /* LogInRMVC.swift */,
+				7444D9CC224041BB006E1638 /* LogOutRMVC.swift */,
+				7444D9C9224041BA006E1638 /* RegisterRMVCViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		82F8520C4CD73F32B9697467 /* Pods */ = {
