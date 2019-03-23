@@ -13,15 +13,22 @@ class RiskTableViewCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var riskTimestamp: UILabel!
-    @IBOutlet weak var riskDescription: UILabel!
+    @IBOutlet weak var riskPreviewDescription: UILabel!
+    @IBOutlet weak var bttn: UIButton!
     
+    weak var delegate: RiskCellDelegator?
     
+    @IBAction func cellTapped(_ sender: UIButton) {
+        delegate?.callSegueFromCell(self)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         
         userImage.createRoundedImageForm()
     }
 
+    @IBAction func buttonTapped(_ sender: Any) {
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -43,10 +50,10 @@ class RiskTableViewCell: UITableViewCell {
         }
         
         userName.text = risk.author.username
-        riskDescription.text = risk.description.replacingOccurrences(of: "\n", with: " ")
-        if (riskDescription.text!.count > Constants.DESC_PREVIEW_MAX_LENGTH) {
-            riskDescription.text = String(riskDescription.text!.prefix(Constants.DESC_PREVIEW_MAX_LENGTH))
-            riskDescription.text! += "..."
+        riskPreviewDescription.text = risk.description.replacingOccurrences(of: "\n", with: " ")
+        if (riskPreviewDescription.text!.count > Constants.DESC_PREVIEW_MAX_LENGTH) {
+            riskPreviewDescription.text = String(riskPreviewDescription.text!.prefix(Constants.DESC_PREVIEW_MAX_LENGTH))
+            riskPreviewDescription.text! += "..."
         }
         riskTimestamp.text = risk.creationDate.calenderTimeSinceNow()
     }

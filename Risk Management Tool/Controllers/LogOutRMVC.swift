@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource, RiskCellDelegator {
     
     @IBOutlet weak var logOutButton: UIBarButtonItem!
     private let pullToRefresh = UIRefreshControl()
@@ -94,7 +94,20 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "riskCell", for: indexPath) as! RiskTableViewCell
         cell.set(risk: risks[indexPath.row])
+        cell.delegate = self
         return cell
+    }
+    
+    func callSegueFromCell(_ sender: RiskTableViewCell) {
+        guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
+//        print(risks[tappedIndexPath.row].author.username)
+        let indexPath = IndexPath(row: tappedIndexPath.row, section: 0)
+        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+        let riskViewController = self.storyboard?.instantiateViewController(withIdentifier: "RiskVC") as! RiskVC
+        riskViewController.riskDescription = risks[tappedIndexPath.row].description
+        riskViewController.riskAuthor = risks[tappedIndexPath.row].author.username
+        
+        self.navigationController?.pushViewController(riskViewController, animated: true)
     }
     
     func fetchRisks() {

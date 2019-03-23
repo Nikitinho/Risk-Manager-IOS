@@ -48,15 +48,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfx-Ze-NaL">
+                                <rect key="frame" x="0.0" y="0.0" width="412" height="188.5"/>
+                                <connections>
+                                    <action selector="cellTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xXr-MN-pXY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6UT-Ri-bv3" firstAttribute="leading" secondItem="BWF-CS-PwD" secondAttribute="trailing" constant="8" id="CeM-Cs-e9l"/>
                             <constraint firstItem="bV9-bJ-g7Y" firstAttribute="leading" secondItem="BWF-CS-PwD" secondAttribute="trailing" constant="8" id="LCT-HG-1x5"/>
+                            <constraint firstItem="Vfx-Ze-NaL" firstAttribute="leading" secondItem="085-ag-kMm" secondAttribute="leading" id="LHw-rj-h8N"/>
                             <constraint firstItem="bV9-bJ-g7Y" firstAttribute="top" secondItem="085-ag-kMm" secondAttribute="top" id="MuX-HR-7ZD"/>
                             <constraint firstItem="6UT-Ri-bv3" firstAttribute="top" secondItem="bV9-bJ-g7Y" secondAttribute="bottom" constant="8" id="QS2-MJ-2Jp"/>
                             <constraint firstAttribute="bottom" secondItem="Tfg-1o-DuP" secondAttribute="bottom" id="TZT-sE-eiS"/>
+                            <constraint firstAttribute="trailing" secondItem="Vfx-Ze-NaL" secondAttribute="trailing" id="Thc-Zk-oV9"/>
+                            <constraint firstItem="Vfx-Ze-NaL" firstAttribute="top" secondItem="085-ag-kMm" secondAttribute="top" id="UH3-6t-1HY"/>
                             <constraint firstItem="BWF-CS-PwD" firstAttribute="top" secondItem="085-ag-kMm" secondAttribute="top" id="Ubn-Qz-0sA"/>
+                            <constraint firstAttribute="bottom" secondItem="Vfx-Ze-NaL" secondAttribute="bottom" id="YLU-B5-fSQ"/>
                             <constraint firstAttribute="trailing" secondItem="Tfg-1o-DuP" secondAttribute="trailing" id="ef4-4t-Hgl"/>
                             <constraint firstItem="Tfg-1o-DuP" firstAttribute="leading" secondItem="BWF-CS-PwD" secondAttribute="trailing" constant="8" id="g9f-Mr-60H"/>
                             <constraint firstItem="Tfg-1o-DuP" firstAttribute="top" secondItem="BWF-CS-PwD" secondAttribute="bottom" constant="8" id="lLe-kU-8P8"/>
@@ -73,7 +83,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="riskDescription" destination="Tfg-1o-DuP" id="3BD-GD-kbu"/>
+                <outlet property="bttn" destination="Vfx-Ze-NaL" id="JSa-xf-cVE"/>
+                <outlet property="riskPreviewDescription" destination="Tfg-1o-DuP" id="gW8-cw-tml"/>
                 <outlet property="riskTimestamp" destination="6UT-Ri-bv3" id="bv3-ig-cxd"/>
                 <outlet property="userImage" destination="BWF-CS-PwD" id="iKL-IU-c23"/>
                 <outlet property="userName" destination="bV9-bJ-g7Y" id="E9J-1G-iCD"/>

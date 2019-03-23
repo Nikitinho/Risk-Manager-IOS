@@ -318,5 +318,64 @@
             </objects>
             <point key="canvasLocation" x="4352.8000000000002" y="-305.39730134932535"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rq4-iq-Qwr">
+            <objects>
+                <navigationController id="JqS-Xx-JcU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ONE-rP-qAK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tmc-53-zfE" kind="relationship" relationship="rootViewController" id="fdg-71-nZC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSu-Y1-2hm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3596" y="541"/>
+        </scene>
+        <!--RiskVC-->
+        <scene sceneID="plO-uz-7oI">
+            <objects>
+                <viewController storyboardIdentifier="RiskVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tmc-53-zfE" customClass="RiskVC" customModule="Risk_Management_Tool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="09u-jf-3DT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kV9-kh-VuC">
+                                <rect key="frame" x="16" y="74" width="343" height="539"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ve4-1Z-dVc">
+                                <rect key="frame" x="16" y="623" width="52" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ve4-1Z-dVc" firstAttribute="top" secondItem="kV9-kh-VuC" secondAttribute="bottom" constant="10" id="06y-4U-U7M"/>
+                            <constraint firstItem="ve4-1Z-dVc" firstAttribute="leading" secondItem="1FE-cD-ytO" secondAttribute="leading" constant="16" id="Efc-OJ-ga0"/>
+                            <constraint firstItem="1FE-cD-ytO" firstAttribute="bottom" secondItem="ve4-1Z-dVc" secondAttribute="bottom" constant="20" id="Jbp-XY-Bqf"/>
+                            <constraint firstItem="kV9-kh-VuC" firstAttribute="leading" secondItem="1FE-cD-ytO" secondAttribute="leading" constant="16" id="NdP-a4-ING"/>
+                            <constraint firstItem="1FE-cD-ytO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ve4-1Z-dVc" secondAttribute="trailing" constant="16" id="ecw-3b-5E6"/>
+                            <constraint firstItem="kV9-kh-VuC" firstAttribute="top" secondItem="1FE-cD-ytO" secondAttribute="top" constant="10" id="ju8-Vd-Q6r"/>
+                            <constraint firstItem="1FE-cD-ytO" firstAttribute="trailing" secondItem="kV9-kh-VuC" secondAttribute="trailing" constant="16" id="uad-Zy-69n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1FE-cD-ytO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yJ9-lf-27w"/>
+                    <connections>
+                        <outlet property="riskAuthorTV" destination="ve4-1Z-dVc" id="dkS-sv-f1x"/>
+                        <outlet property="riskDescriptionTV" destination="kV9-kh-VuC" id="FBy-Yt-xkE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yl-GE-Qt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4352.8000000000002" y="539.28035982008998"/>
+        </scene>
     </scenes>
 </document>
