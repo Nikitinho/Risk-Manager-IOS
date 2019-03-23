@@ -39,6 +39,7 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         tableView.reloadData()
         
     }
