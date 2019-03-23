@@ -20,8 +20,6 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        risks = fillTestParams()
         
         logOutButton.target = self;
         logOutButton.action = #selector(self.onLogOutAction(_sender:))
@@ -46,6 +44,8 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.reloadData()
+        
+        fetchRisks()
         
     }
     
@@ -72,13 +72,32 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func fillTestParams() -> [Risk] {
-        risks = [
-            Risk(id: "1", author: "Andrew Skobtsov", description: "Test description 1"),
-            Risk(id: "2", author: "Vadim Margiev", description: "Test description 2"),
-            Risk(id: "3", author: "Margij Vadimov", description: "Test description 3")
-        ]
-        return risks
+    func fetchRisks() {
+        let riskRef = FIRDatabase.database().reference().child("risks")
+        
+        var tempRisks = [Risk]()
+        
+        riskRef.observe(.value, with: { snapshot in
+            for child in snapshot.children {
+                if let childSnapshot = child as? FIRDataSnapshot,
+                let dict = childSnapshot.value as? [String:Any],
+                let author = dict["author"] as? [String:Any],
+                let uid = author["uid"] as? String,
+                let username = author["username"] as? String,
+                let photoURL = author["photoURL"] as? String,
+                let url = URL(string:photoURL),
+                let description = dict["description"] as? String,
+                let timestamp = dict["timestamp"] as? Double {
+                    let userProfile = UserProfile(uid: uid, username: username, photoURL: url)
+                    let risk = Risk(id: childSnapshot.key, author: userProfile, description: description, timestamp: timestamp)
+                    tempRisks.append(risk)
+                }
+                
+            }
+            
+            self.risks = tempRisks
+            self.tableView.reloadData()
+        })
     }
     
     func tableViewConstraintFix(_ tableView: UITableView, _ layoutGuide: UILayoutGuide) {

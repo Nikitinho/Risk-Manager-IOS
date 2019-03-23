@@ -11,12 +11,14 @@ import Foundation
 
 class Risk {
     var id:String
-    var author:String
+    var author:UserProfile
     var description:String
+    var timestamp:Double
     
-    init(id:String, author:String, description:String) {
+    init(id:String, author:UserProfile, description:String, timestamp:Double) {
         self.id = id
         self.author = author
         self.description = description
+        self.timestamp = timestamp
     }
 }

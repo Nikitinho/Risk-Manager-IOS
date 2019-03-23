@@ -31,7 +31,7 @@ class RiskTableViewCell: UITableViewCell {
     }
     
     func set(risk:Risk) {
-        userName.text = risk.author
+        userName.text = risk.author.username
         riskDescription.text = risk.description
     }
 }

@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85.599999999999994" y="27.436281859070466"/>
+            <point key="canvasLocation" x="134" y="27"/>
         </scene>
         <!--RegisterRMVC View Controller-->
         <scene sceneID="A3X-bU-STG">
@@ -168,16 +168,39 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="gfg-OS-y3d"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Risks" id="ZOR-g5-c3v">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="JFz-20-s87"/>
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="JFz-20-s87"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="3jp-Gm-srf">
+                            <connections>
+                                <segue destination="2F9-aM-reE" kind="presentation" id="goU-RQ-gjx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="logOutButton" destination="JFz-20-s87" id="lNe-e1-t4S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUU-S5-2gX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2503" y="450"/>
+            <point key="canvasLocation" x="2762" y="27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zhI-Ee-UZT">
+            <objects>
+                <navigationController id="2F9-aM-reE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l2f-JF-2eU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="INv-Vf-wcz" kind="relationship" relationship="rootViewController" id="9JW-0I-TDL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pwp-uZ-CV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3596" y="-305"/>
         </scene>
         <!--Item-->
         <scene sceneID="AaP-E6-4Bz">
@@ -196,7 +219,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtU-Fp-lvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="449"/>
+            <point key="canvasLocation" x="1972" y="27"/>
         </scene>
         <!--MainTabBarController-->
         <scene sceneID="89P-Ru-uxG">
@@ -215,6 +238,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LG-Za-s00" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1034" y="451"/>
+        </scene>
+        <!--New RiskVC-->
+        <scene sceneID="Ybd-gO-8F7">
+            <objects>
+                <viewController id="INv-Vf-wcz" customClass="NewRiskVC" customModule="Risk_Management_Tool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hb6-Xn-eHZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ISY-bq-9CZ">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwm-GB-KkI">
+                                <rect key="frame" x="16" y="64" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ESe-Mj-9IA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aTj-aV-bIK">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="LqB-GR-7WW">
+                            <connections>
+                                <action selector="onCancelAction:" destination="INv-Vf-wcz" id="Rdx-Go-VmX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Approve" id="W8N-zx-Z7a">
+                            <connections>
+                                <action selector="onApproveAction:" destination="INv-Vf-wcz" id="pfR-rW-c0Z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="approveButton" destination="W8N-zx-Z7a" id="IDZ-4H-bwe"/>
+                        <outlet property="cancelButton" destination="LqB-GR-7WW" id="8au-iO-r3a"/>
+                        <outlet property="textLabel" destination="Kwm-GB-KkI" id="oiG-ZK-RTM"/>
+                        <outlet property="textView" destination="ISY-bq-9CZ" id="x5S-Xm-ubf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ggb-af-0aw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4352.8000000000002" y="-305.39730134932535"/>
         </scene>
     </scenes>
 </document>

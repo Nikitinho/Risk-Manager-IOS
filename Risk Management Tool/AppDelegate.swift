@@ -20,26 +20,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         
-//         needed until log out button not added
-//        do{
-//            try FIRAuth.auth()?.signOut()
-//        } catch {
-//            print (error)
-//        }
-        
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            let controller = (user != nil)
-                ? storyboard.instantiateViewController(withIdentifier: "MainBarController") as! UITabBarController
-                : storyboard.instantiateViewController(withIdentifier: "LogInRMVC")
+            let controller = self.configureProfile(user: user, storyboard: storyboard)
             
             self.window?.rootViewController = controller
             self.window?.makeKeyAndVisible()
         }
         
         return true
+    }
+    
+    func configureProfile(user:FIRUser?, storyboard:UIStoryboard) -> UIViewController {
+        if user != nil {
+            UserService.observeUserProfile(user!.uid) { userProfile in
+                UserService.currentUserProfile = userProfile
+            }
+            return storyboard.instantiateViewController(withIdentifier: "MainBarController") as! UITabBarController
+        } else {
+            UserService.currentUserProfile = nil
+            return storyboard.instantiateViewController(withIdentifier: "LogInRMVC")
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
