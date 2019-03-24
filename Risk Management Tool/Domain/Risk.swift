@@ -21,6 +21,8 @@ class Risk {
     var integrity:Int
     var availability:Int
     
+    var threats:[String: [String: Int]]?
+    
     init(id:String, author:UserProfile, title: String, description: String, timestamp: Double, confidentiality: Int, integrity: Int, availability: Int) {
         self.id = id
         self.author = author
@@ -33,6 +35,10 @@ class Risk {
         self.confidentiality = confidentiality
         self.integrity = integrity
         self.availability = availability
+    }
+    
+    func addThreats(threats: [String: [String: Int]]) {
+        self.threats = threats
     }
 }
 

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class NewRiskVC:UIViewController, UITextViewDelegate {
+class NewRiskVC:UIViewController, UITextViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var descriptionTV: UITextView!
     @IBOutlet weak var riskTitleTV: UITextView!
@@ -26,13 +26,64 @@ class NewRiskVC:UIViewController, UITextViewDelegate {
     @IBOutlet weak var impactLabel: UILabel!
     
     var newParameters = [
-        "confidentiality": [String](),
-        "integrity": [String](),
-        "availability" : [String]()
+        "confidentiality": [String:Int](),
+        "integrity": [String:Int](),
+        "availability" : [String:Int]()
     ]
     
-    var textView:UITextView?
+    var rateSelect:UIPickerView?
+    var selectedRate:String?
     var categoryView:UITextView?
+    var categorySelect:UIPickerView?
+    var selectedCategory:String?
+    var textView:UITextView?
+    
+    // values of picker
+    private let categories: NSArray = ["confidentiality", "integrity", "availability"]
+    private let rates: NSArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView {
+        case categorySelect:
+            return categories.count
+        case rateSelect:
+            return rates.count
+        default:
+            return 0
+        }
+    }
+    
+    // delegate method to return the value shown in the picker
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch pickerView {
+        case categorySelect:
+            return categories[row] as? String
+        case rateSelect:
+            return rates[row] as? String
+        default:
+            return nil
+        }
+    }
+    
+    // delegate method called when the row was selected.
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView {
+        case categorySelect:
+            selectedCategory = categories[row] as? String
+        case rateSelect:
+            selectedRate = rates[row] as? String
+        default:
+            return
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
     @IBAction func onConfidentialityChanged(_ sender: UISlider) {
         let index = (Int)(sender.value + 0.5);
@@ -58,54 +109,85 @@ class NewRiskVC:UIViewController, UITextViewDelegate {
     
     @objc func onCRAMMButtonAction(_sender:UIButton!)
     {
-        
-        if (textView != nil && categoryView != nil) {
-            switch categoryView?.text {
-            case "3":
-                newParameters["confidentiality"]!.append((textView?.text)!)
-            case "2":
-                newParameters["integrity"]!.append((textView?.text)!)
-            case "1":
-                newParameters["availability"]!.append((textView?.text)!)
-            case .none:
-                return
-            case .some(_):
+        if (rateSelect != nil && categorySelect != nil && textView != nil) {
+            
+            guard selectedRate != nil,
+            selectedCategory != nil,
+            (textView?.text.count)! > 0
+            else {
+                LogMessage.showMessage(inVC: self, title: "Info is missing", message: "Fill all the gaps")
                 return
             }
+            
+            switch selectedCategory! {
+            case "confidentiality":
+                (newParameters["confidentiality"])![(textView?.text)!] = (Int)(selectedRate!)
+            case "integrity":
+                (newParameters["integrity"])![(textView?.text)!] = (Int)(selectedRate!)
+            case "availability":
+                newParameters["availability"]?[(textView?.text)!] = (Int)(selectedRate!)
+            default:
+                return
+            }
+            
+            textView!.text = ""
+            rateSelect!.selectRow(0, inComponent: 0, animated: false)
+            categorySelect!.selectRow(0, inComponent: 0, animated: false)
+            
+        } else {
+        
+            let X1 = riskTitleTV.frame.origin.x
+            let Y1 = confidentialitySilder.frame.origin.y
+            let width1 = riskTitleTV.frame.size.width/4 - 5
+            let height1 = riskTitleTV.frame.size.height
+            
+            rateSelect = UIPickerView(frame: CGRect(x: X1, y: Y1, width: width1, height: height1))
+    
+            rateSelect?.addRoundedBorder()
+            
+            rateSelect!.delegate = self
+            rateSelect!.dataSource = self
+    
+            self.view.addSubview(rateSelect!)
+            
+            rateSelect!.selectRow(0, inComponent: 0, animated: false)
+    
+            let Y2 = confidentialitySilder.frame.origin.y
+            let width2 = riskTitleTV.frame.size.width/4 * 3 - 5
+            let height2 = height1
+            let X2 = riskTitleTV.frame.origin.x + width1 + 10
+    
+            categorySelect = UIPickerView(frame:CGRect(x: X2, y: Y2, width: width2, height: height2))
+            
+            categorySelect?.addRoundedBorder()
+    
+            categorySelect!.delegate = self
+            categorySelect!.dataSource = self
+    
+            self.view.addSubview(categorySelect!)
+            
+            categorySelect!.selectRow(0, inComponent: 0, animated: false)
+            
+            let X3 = riskTitleTV.frame.origin.x
+            let Y3 = confidentialitySilder.frame.origin.y + height1 + 10
+            let width3 = riskTitleTV.frame.size.width
+            let height3 = height1
+            
+            textView = UITextView(frame:CGRect(x: X3, y: Y3, width: width3, height: height3))
+            textView?.addRoundedBorder()
+            
+            self.view.addSubview(textView!)
+            
+            hideSliders()
         }
-        
-        let X1 = riskTitleTV.frame.origin.x
-        let Y1 = confidentialitySilder.frame.origin.y
-        let width1 = riskTitleTV.frame.size.width/2 - 5
-        let height1 = riskTitleTV.frame.size.height
-        
-        textView = UITextView(frame: CGRect(x: X1, y: Y1, width: width1, height: height1))
-        textView!.addRoundedBorder()
-        
-        self.view.addSubview(textView!)
-        
-        let Y2 = confidentialitySilder.frame.origin.y
-        let width2 = riskTitleTV.frame.size.width/2 - 5
-        let height2 = riskTitleTV.frame.size.height
-        let X2 = riskTitleTV.frame.origin.x + width2 + 10
-        
-        categoryView = UITextView(frame: CGRect(x: X2, y: Y2, width: width2, height: height2))
-        categoryView!.addRoundedBorder()
-        
-        self.view.addSubview(categoryView!)
-        
-        hideSliders()
     }
     
     override func viewDidLoad() {
         descriptionTV.addRoundedBorder()
         riskTitleTV.addRoundedBorder()
-        confidentialitySilder.maximumValue = 10
-        confidentialitySilder.minimumValue = 0
-        integritySlider.minimumValue = 0
-        integritySlider.maximumValue = 10
-        availabilitySlider.minimumValue = 0
-        availabilitySlider.maximumValue = 10
+        confidentialitySilder.initWithMinAndMaxValues(min: 0, max: 10)
+        integritySlider.initWithMinAndMaxValues(min: 0, max: 10)
+        availabilitySlider.initWithMinAndMaxValues(min: 0, max: 10)
         
         crammButton.addTarget(self, action: #selector(self.onCRAMMButtonAction(_sender:)), for: UIControl.Event.touchUpInside)
     }
@@ -163,5 +245,20 @@ public extension UITextView {
         self.layer.borderColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0).cgColor
         self.layer.borderWidth = 1.0
         self.layer.cornerRadius = 5
+    }
+}
+
+public extension UIPickerView {
+    func addRoundedBorder() {
+        self.layer.borderColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0).cgColor
+        self.layer.borderWidth = 1.0
+        self.layer.cornerRadius = 5
+    }
+}
+
+public extension UISlider {
+    func initWithMinAndMaxValues(min: Float, max: Float) {
+        self.maximumValue = max
+        self.minimumValue = min
     }
 }
