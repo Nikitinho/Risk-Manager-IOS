@@ -49,12 +49,3 @@ class RiskVC: UIViewController {
         return output
     }
 }
-
-extension UIImageView {
-    func setImageFromURL(url: URL?) {
-        guard url != nil else { return}
-        ImageService.getImage(url: url!) { image, url in
-            return self.image = image
-        }
-    }
-}

@@ -189,6 +189,8 @@ class NewRiskVC:UIViewController, UITextViewDelegate, UIPickerViewDelegate, UIPi
         integritySlider.initWithMinAndMaxValues(min: 0, max: 10)
         availabilitySlider.initWithMinAndMaxValues(min: 0, max: 10)
         
+        self.hideKeyboardWhenTappedAround()
+        
         crammButton.addTarget(self, action: #selector(self.onCRAMMButtonAction(_sender:)), for: UIControl.Event.touchUpInside)
     }
     
@@ -256,28 +258,5 @@ class NewRiskVC:UIViewController, UITextViewDelegate, UIPickerViewDelegate, UIPi
         
         riskRef.child("additionalParameters").setValue(newParameters)
         
-    }
-}
-
-public extension UITextView {
-    func addRoundedBorder() {
-        self.layer.borderColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0).cgColor
-        self.layer.borderWidth = 1.0
-        self.layer.cornerRadius = 5
-    }
-}
-
-public extension UIPickerView {
-    func addRoundedBorder() {
-        self.layer.borderColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0).cgColor
-        self.layer.borderWidth = 1.0
-        self.layer.cornerRadius = 5
-    }
-}
-
-public extension UISlider {
-    func initWithMinAndMaxValues(min: Float, max: Float) {
-        self.maximumValue = max
-        self.minimumValue = min
     }
 }

@@ -62,10 +62,3 @@ class RiskTableViewCell: UITableViewCell {
         riskTimestamp.text = risk.creationDate.calenderTimeSinceNow()
     }
 }
-
-extension String {
-    func charAt(at: Int) -> Character {
-        let charIndex = self.index(self.startIndex, offsetBy: at)
-        return self[charIndex]
-    }
-}

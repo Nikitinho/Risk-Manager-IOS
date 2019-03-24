@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		740339C92247DF13007CCB1E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740339C82247DF13007CCB1E /* Extensions.swift */; };
 		740828C522456EA4008EDFBF /* RiskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740828C322456EA4008EDFBF /* RiskTableViewCell.swift */; };
 		740828C622456EA4008EDFBF /* RiskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740828C422456EA4008EDFBF /* RiskTableViewCell.xib */; };
 		740828C922457D77008EDFBF /* Risk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740828C822457D77008EDFBF /* Risk.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		1338F2D2861A87E4FD6C99BC /* Pods_Risk_Management_Tool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Risk_Management_Tool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		740339C82247DF13007CCB1E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		740828C322456EA4008EDFBF /* RiskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskTableViewCell.swift; sourceTree = "<group>"; };
 		740828C422456EA4008EDFBF /* RiskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiskTableViewCell.xib; sourceTree = "<group>"; };
 		740828C822457D77008EDFBF /* Risk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Risk.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				740828C822457D77008EDFBF /* Risk.swift */,
 				7481E14722463E7E009D2392 /* UserProfile.swift */,
 				7493F5992246AED5007F6CD1 /* Constatnts.swift */,
+				740339C82247DF13007CCB1E /* Extensions.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				7481E14A22463ECD009D2392 /* UserService.swift in Sources */,
 				7481E144224637EB009D2392 /* NewRiskVC.swift in Sources */,
 				7493F59C2246B84F007F6CD1 /* RiskCellDelegator.swift in Sources */,
+				740339C92247DF13007CCB1E /* Extensions.swift in Sources */,
 				7481E14C22465B54009D2392 /* ImageService.swift in Sources */,
 				744F1C232246D73900AB3978 /* RiskVC.swift in Sources */,
 				740828C922457D77008EDFBF /* Risk.swift in Sources */,
