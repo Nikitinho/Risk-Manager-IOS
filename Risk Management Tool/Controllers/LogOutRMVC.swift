@@ -100,7 +100,6 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     func callSegueFromCell(_ sender: RiskTableViewCell) {
         guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
-//        print(risks[tappedIndexPath.row].author.username)
         let indexPath = IndexPath(row: tappedIndexPath.row, section: 0)
         self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
         let riskViewController = self.storyboard?.instantiateViewController(withIdentifier: "RiskVC") as! RiskVC
