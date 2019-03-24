@@ -11,6 +11,11 @@ import Firebase
 
 class LogInRMVC: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
     @IBOutlet weak var userEmail: UITextField!
     
     @IBOutlet weak var userPassword: UITextField!

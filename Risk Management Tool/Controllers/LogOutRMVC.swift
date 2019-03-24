@@ -14,11 +14,12 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     @IBOutlet weak var logOutButton: UIBarButtonItem!
     private let pullToRefresh = UIRefreshControl()
-    
+    let searchController = UISearchController(searchResultsController: nil)
     
     var tableView:UITableView!
     
     var risks = [Risk]()
+    var filteredRisks = [Risk]()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -31,6 +32,12 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Risks"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
         
         self.tabBarController?.tabBar.isHidden = true
         
@@ -90,12 +97,20 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredRisks.count
+        }
+        
         return risks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "riskCell", for: indexPath) as! RiskTableViewCell
-        cell.set(risk: risks[indexPath.row])
+        if isFiltering() {
+            cell.set(risk: filteredRisks[indexPath.row])
+        } else {
+            cell.set(risk: risks[indexPath.row])
+        }
         cell.delegate = self
         return cell
     }
@@ -156,5 +171,30 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         tableView.topAnchor.constraint(equalTo: layoutGuide.topAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredRisks = risks.filter({( risk : Risk) -> Bool in
+            return risk.title.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+}
+
+extension LogOutRMVC: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
     }
 }

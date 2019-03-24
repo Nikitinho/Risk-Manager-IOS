@@ -183,6 +183,8 @@ class NewRiskVC:UIViewController, UITextViewDelegate, UIPickerViewDelegate, UIPi
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         descriptionTV.addRoundedBorder()
         riskTitleTV.addRoundedBorder()
         confidentialitySilder.initWithMinAndMaxValues(min: 0, max: 10)

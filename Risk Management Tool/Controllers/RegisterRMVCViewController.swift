@@ -31,6 +31,7 @@ class RegisterRMVCViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         changeImage.addTarget(self, action: #selector(self.changeImageAction(_sender:)), for: UIControl.Event.touchUpInside)
         
