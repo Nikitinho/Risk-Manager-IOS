@@ -210,6 +210,25 @@ class NewRiskVC:UIViewController, UITextViewDelegate, UIPickerViewDelegate, UIPi
         
         guard let userProfile = UserService.currentUserProfile else { return }
         
+        guard let riskTitle = riskTitleTV.text,
+            riskTitle != ""
+            else {
+                LogMessage.showMessage(inVC: self, title: "Info is missing", message: "Title field is empty")
+                return
+        }
+        
+        guard let description = descriptionTV.text,
+            description != ""
+            else {
+                LogMessage.showMessage(inVC: self, title: "Info is missing", message: "Description field is empty")
+                return
+        }
+        
+        if (newParameters["confidentiality"]?.count == 0 && newParameters["integrity"]?.count == 0 && newParameters["availability"]?.count == 0) {
+            LogMessage.showMessage(inVC: self, title: "Info is missing", message: "Threats field is empty")
+            return
+        }
+        
         let riskRef = FIRDatabase.database().reference().child("risks").childByAutoId()
         
         let riskObject = [
@@ -222,8 +241,8 @@ class NewRiskVC:UIViewController, UITextViewDelegate, UIPickerViewDelegate, UIPi
             "confidentiality": (Int)(confidentialitySilder.value),
             "integrity": (Int)(integritySlider.value),
             "availability": (Int)(availabilitySlider.value),
-            "title": riskTitleTV.text,
-            "description": descriptionTV.text,
+            "title": riskTitle,
+            "description": description,
             "timestamp": [".sv":"timestamp"]
         ] as [String : Any]
         

@@ -50,15 +50,15 @@ class RiskTableViewCell: UITableViewCell {
         }
         
         riskTitle.text = risk.title.replacingOccurrences(of: "\n", with: " ")
-        if (riskTitle.text!.count > Constants.RISK_TITLE_MAX_LENGTH) {
-            riskTitle.text = String(riskTitle.text!.prefix(Constants.RISK_TITLE_MAX_LENGTH))
-            riskTitle.text! += "..."
-        }
+        riskTitle.adjustsFontSizeToFitWidth = false
+        riskTitle.lineBreakMode = NSLineBreakMode.byTruncatingTail
+        riskTitle.numberOfLines = 1
+
         riskPreviewDescription.text = risk.description.replacingOccurrences(of: "\n", with: " ")
-        if (riskPreviewDescription.text!.count > Constants.DESC_PREVIEW_MAX_LENGTH) {
-            riskPreviewDescription.text = String(riskPreviewDescription.text!.prefix(Constants.DESC_PREVIEW_MAX_LENGTH))
-            riskPreviewDescription.text! += "..."
-        }
+        riskPreviewDescription.adjustsFontSizeToFitWidth = false
+        riskPreviewDescription.lineBreakMode = NSLineBreakMode.byTruncatingTail
+        riskPreviewDescription.numberOfLines = 1
+        
         riskTimestamp.text = risk.creationDate.calenderTimeSinceNow()
     }
 }

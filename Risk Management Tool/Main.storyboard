@@ -474,7 +474,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ve4-1Z-dVc">
-                                <rect key="frame" x="16" y="623" width="52" height="24"/>
+                                <rect key="frame" x="16" y="617" width="52" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -506,6 +506,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IXp-2a-IFz">
+                                <rect key="frame" x="76" y="606" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IXp-2a-IFz" secondAttribute="height" multiplier="1:1" id="LvM-mX-vWC"/>
+                                    <constraint firstAttribute="width" constant="45" id="cvU-ho-tYZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -514,25 +521,29 @@
                             <constraint firstItem="1FE-cD-ytO" firstAttribute="trailing" secondItem="kV9-kh-VuC" secondAttribute="trailing" constant="16" id="3us-nX-Tiy"/>
                             <constraint firstItem="ve4-1Z-dVc" firstAttribute="leading" secondItem="1FE-cD-ytO" secondAttribute="leading" constant="16" id="Efc-OJ-ga0"/>
                             <constraint firstItem="kV9-kh-VuC" firstAttribute="top" secondItem="JMN-qF-HbR" secondAttribute="bottom" constant="8" id="F6M-cj-34Z"/>
-                            <constraint firstItem="1FE-cD-ytO" firstAttribute="bottom" secondItem="ve4-1Z-dVc" secondAttribute="bottom" constant="20" id="Jbp-XY-Bqf"/>
+                            <constraint firstItem="1FE-cD-ytO" firstAttribute="bottom" secondItem="ve4-1Z-dVc" secondAttribute="bottom" constant="26" id="Jbp-XY-Bqf"/>
                             <constraint firstItem="kV9-kh-VuC" firstAttribute="leading" secondItem="1FE-cD-ytO" secondAttribute="leading" constant="16" id="KMn-Fx-v16"/>
                             <constraint firstItem="Haf-lb-cR8" firstAttribute="leading" secondItem="1FE-cD-ytO" secondAttribute="leading" constant="16" id="LZ9-up-juk"/>
                             <constraint firstItem="LwJ-Gu-JkP" firstAttribute="top" secondItem="Haf-lb-cR8" secondAttribute="bottom" constant="10" id="N3B-QR-AiK"/>
                             <constraint firstItem="Haf-lb-cR8" firstAttribute="top" secondItem="kV9-kh-VuC" secondAttribute="bottom" constant="5" id="SBK-bZ-AV9"/>
                             <constraint firstItem="ve4-1Z-dVc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LwJ-Gu-JkP" secondAttribute="bottom" constant="16" id="UNm-C6-l9l"/>
                             <constraint firstItem="1FE-cD-ytO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DWj-8q-brf" secondAttribute="trailing" constant="16" id="Wg5-7r-Ywi"/>
-                            <constraint firstItem="1FE-cD-ytO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ve4-1Z-dVc" secondAttribute="trailing" constant="16" id="ecw-3b-5E6"/>
+                            <constraint firstItem="IXp-2a-IFz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LwJ-Gu-JkP" secondAttribute="bottom" constant="16" id="j9K-oc-bjD"/>
                             <constraint firstItem="LwJ-Gu-JkP" firstAttribute="leading" secondItem="1FE-cD-ytO" secondAttribute="leading" constant="16" id="jmA-mk-4hB"/>
                             <constraint firstItem="JMN-qF-HbR" firstAttribute="leading" secondItem="1FE-cD-ytO" secondAttribute="leading" constant="16" id="lyT-zc-w4d"/>
                             <constraint firstItem="DWj-8q-brf" firstAttribute="leading" secondItem="1FE-cD-ytO" secondAttribute="leading" constant="16" id="rgh-kd-wNS"/>
                             <constraint firstItem="1FE-cD-ytO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JMN-qF-HbR" secondAttribute="trailing" constant="16" id="rl3-1O-DWM"/>
+                            <constraint firstItem="1FE-cD-ytO" firstAttribute="bottom" secondItem="IXp-2a-IFz" secondAttribute="bottom" constant="16" id="rzS-DO-ZbI"/>
+                            <constraint firstItem="IXp-2a-IFz" firstAttribute="leading" secondItem="ve4-1Z-dVc" secondAttribute="trailing" constant="8" id="ttT-fK-uDN"/>
                             <constraint firstItem="1FE-cD-ytO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Haf-lb-cR8" secondAttribute="trailing" constant="16" id="uak-mG-5wm"/>
+                            <constraint firstItem="1FE-cD-ytO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IXp-2a-IFz" secondAttribute="trailing" constant="16" id="ujr-pb-aA3"/>
                             <constraint firstItem="JMN-qF-HbR" firstAttribute="top" secondItem="DWj-8q-brf" secondAttribute="bottom" constant="25" id="xYc-2f-tnF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1FE-cD-ytO"/>
                     </view>
                     <navigationItem key="navigationItem" id="yJ9-lf-27w"/>
                     <connections>
+                        <outlet property="imageView" destination="IXp-2a-IFz" id="fbB-1l-5zf"/>
                         <outlet property="riskAnalysisTV" destination="LwJ-Gu-JkP" id="uxC-8W-YbV"/>
                         <outlet property="riskAuthorTV" destination="ve4-1Z-dVc" id="dkS-sv-f1x"/>
                         <outlet property="riskDescriptionTV" destination="kV9-kh-VuC" id="FBy-Yt-xkE"/>

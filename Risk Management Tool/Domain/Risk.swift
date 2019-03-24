@@ -76,10 +76,6 @@ class Risk {
             }
         }
     }
-    
-    private func deepCalculation() {
-        
-    }
 }
 
 extension Date {

@@ -32,6 +32,8 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController?.tabBar.isHidden = true
+        
         logOutButton.target = self;
         logOutButton.action = #selector(self.onLogOutAction(_sender:))
         
@@ -108,6 +110,7 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         riskViewController.riskTitle = chosenRisk.title
         riskViewController.riskDescription = chosenRisk.description
         riskViewController.riskAuthor = chosenRisk.author.username
+        riskViewController.imageURL = chosenRisk.author.photoURL
         
         self.navigationController?.pushViewController(riskViewController, animated: true)
     }
