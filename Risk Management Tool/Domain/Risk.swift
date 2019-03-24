@@ -10,6 +10,7 @@ import Foundation
 
 
 class Risk {
+    
     var id:String
     var author:UserProfile
     var title:String
@@ -22,6 +23,7 @@ class Risk {
     var availability:Int
     
     var threats:[String: [String: Int]]?
+    var risksLevel:[String: String]?
     
     init(id:String, author:UserProfile, title: String, description: String, timestamp: Double, confidentiality: Int, integrity: Int, availability: Int) {
         self.id = id
@@ -39,6 +41,44 @@ class Risk {
     
     func addThreats(threats: [String: [String: Int]]) {
         self.threats = threats
+    }
+    
+    func calculateRisksLevel() {
+        guard threats != nil else { return }
+        
+        risksLevel = [String: String]()
+        
+        for category in threats! {
+            var impact = 0
+            switch category.key {
+            case "confidentiality":
+                impact = confidentiality
+            case "integrity":
+                impact = integrity
+            case "availability":
+                impact = availability
+            default:
+                return
+            }
+            
+            for (threat, rate) in category.value {
+                let riskLevel = rate * impact
+                switch (riskLevel) {
+                case 0..<34:
+                    risksLevel![threat] = "Low"
+                case 34..<69:
+                    risksLevel![threat] = "Medium"
+                case 70..<101:
+                    risksLevel![threat] = "High"
+                default:
+                    risksLevel![threat] = "Undefined"
+                }
+            }
+        }
+    }
+    
+    private func deepCalculation() {
+        
     }
 }
 
