@@ -10,7 +10,7 @@ import UIKit
 
 class RiskTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var riskTitle: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var riskTimestamp: UILabel!
     @IBOutlet weak var riskPreviewDescription: UILabel!
@@ -49,7 +49,11 @@ class RiskTableViewCell: UITableViewCell {
             
         }
         
-        userName.text = risk.author.username
+        riskTitle.text = risk.title.replacingOccurrences(of: "\n", with: " ")
+        if (riskTitle.text!.count > Constants.RISK_TITLE_MAX_LENGTH) {
+            riskTitle.text = String(riskTitle.text!.prefix(Constants.RISK_TITLE_MAX_LENGTH))
+            riskTitle.text! += "..."
+        }
         riskPreviewDescription.text = risk.description.replacingOccurrences(of: "\n", with: " ")
         if (riskPreviewDescription.text!.count > Constants.DESC_PREVIEW_MAX_LENGTH) {
             riskPreviewDescription.text = String(riskPreviewDescription.text!.prefix(Constants.DESC_PREVIEW_MAX_LENGTH))

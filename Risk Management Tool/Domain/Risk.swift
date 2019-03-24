@@ -12,17 +12,27 @@ import Foundation
 class Risk {
     var id:String
     var author:UserProfile
+    var title:String
     var description:String
     var timestamp:Double
     var creationDate:Date
     
-    init(id:String, author:UserProfile, description:String, timestamp:Double) {
+    var confidentiality:Int
+    var integrity:Int
+    var availability:Int
+    
+    init(id:String, author:UserProfile, title: String, description: String, timestamp: Double, confidentiality: Int, integrity: Int, availability: Int) {
         self.id = id
         self.author = author
+        self.title = title
         self.description = description
         self.timestamp = timestamp
         // we divide, because we actually don't need mileseconds.
         self.creationDate = Date(timeIntervalSince1970: timestamp / 1000)
+        
+        self.confidentiality = confidentiality
+        self.integrity = integrity
+        self.availability = availability
     }
 }
 

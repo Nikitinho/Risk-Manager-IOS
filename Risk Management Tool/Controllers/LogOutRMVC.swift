@@ -125,10 +125,14 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
                 let username = author["username"] as? String,
                 let photoURL = author["photoURL"] as? String,
                 let url = URL(string:photoURL),
+                let title = dict["title"] as? String,
                 let description = dict["description"] as? String,
+                let confidentiality = dict["confidentiality"] as? Int,
+                let integrity = dict["integrity"] as? Int,
+                let availability = dict["availability"] as? Int,
                 let timestamp = dict["timestamp"] as? Double {
                     let userProfile = UserProfile(uid: uid, username: username, photoURL: url)
-                    let risk = Risk(id: childSnapshot.key, author: userProfile, description: description, timestamp: timestamp)
+                    let risk = Risk(id: childSnapshot.key, author: userProfile, title: title, description: description, timestamp: timestamp, confidentiality: confidentiality, integrity: integrity, availability: availability)
                     tempRisks.insert(risk, at: 0)
                 }
             }

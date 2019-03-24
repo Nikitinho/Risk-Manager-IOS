@@ -10,4 +10,5 @@ import Foundation
 
 struct Constants {
     static let DESC_PREVIEW_MAX_LENGTH = 30
+    static let RISK_TITLE_MAX_LENGTH = 25
 }

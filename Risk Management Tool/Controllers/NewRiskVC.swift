@@ -137,9 +137,9 @@ class NewRiskVC:UIViewController, UITextViewDelegate {
                 "photoURL": userProfile.photoURL.absoluteString
             ],
             "additionalParameters": [],
-            "confidentiality": (String)((Int)(confidentialitySilder.value)),
-            "integrity": (String)((Int)(integritySlider.value)),
-            "availability": (String)((Int)(availabilitySlider.value)),
+            "confidentiality": (Int)(confidentialitySilder.value),
+            "integrity": (Int)(integritySlider.value),
+            "availability": (Int)(availabilitySlider.value),
             "title": riskTitleTV.text,
             "description": descriptionTV.text,
             "timestamp": [".sv":"timestamp"]

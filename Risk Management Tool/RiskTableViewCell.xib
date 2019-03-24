@@ -86,8 +86,8 @@
                 <outlet property="bttn" destination="Vfx-Ze-NaL" id="JSa-xf-cVE"/>
                 <outlet property="riskPreviewDescription" destination="Tfg-1o-DuP" id="gW8-cw-tml"/>
                 <outlet property="riskTimestamp" destination="6UT-Ri-bv3" id="bv3-ig-cxd"/>
-                <outlet property="userImage" destination="BWF-CS-PwD" id="iKL-IU-c23"/>
-                <outlet property="userName" destination="bV9-bJ-g7Y" id="E9J-1G-iCD"/>
+                <outlet property="riskTitle" destination="bV9-bJ-g7Y" id="n3z-BP-2zn"/>
+                <outlet property="userImage" destination="BWF-CS-PwD" id="axu-dB-WOZ"/>
             </connections>
             <point key="canvasLocation" x="-414.39999999999998" y="-324.28785607196403"/>
         </tableViewCell>
