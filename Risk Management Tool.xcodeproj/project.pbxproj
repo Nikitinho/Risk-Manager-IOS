@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		740339C92247DF13007CCB1E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740339C82247DF13007CCB1E /* Extensions.swift */; };
+		74033AA02248616A007CCB1E /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74033A9F22486169007CCB1E /* FancyButton.swift */; };
+		74033AA3224862B9007CCB1E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74033AA2224862B9007CCB1E /* GradientView.swift */; };
 		740828C522456EA4008EDFBF /* RiskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740828C322456EA4008EDFBF /* RiskTableViewCell.swift */; };
 		740828C622456EA4008EDFBF /* RiskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740828C422456EA4008EDFBF /* RiskTableViewCell.xib */; };
 		740828C922457D77008EDFBF /* Risk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740828C822457D77008EDFBF /* Risk.swift */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		1338F2D2861A87E4FD6C99BC /* Pods_Risk_Management_Tool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Risk_Management_Tool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		740339C82247DF13007CCB1E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		74033A9F22486169007CCB1E /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		74033AA2224862B9007CCB1E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		740828C322456EA4008EDFBF /* RiskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskTableViewCell.swift; sourceTree = "<group>"; };
 		740828C422456EA4008EDFBF /* RiskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiskTableViewCell.xib; sourceTree = "<group>"; };
 		740828C822457D77008EDFBF /* Risk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Risk.swift; sourceTree = "<group>"; };
@@ -71,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74033AA1224861D7007CCB1E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				7444D9C7224041BA006E1638 /* AppDelegate.swift */,
+				7493F59B2246B84F007F6CD1 /* RiskCellDelegator.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		740828C722457D63008EDFBF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,9 @@
 				7481E14722463E7E009D2392 /* UserProfile.swift */,
 				7493F5992246AED5007F6CD1 /* Constatnts.swift */,
 				740339C82247DF13007CCB1E /* Extensions.swift */,
+				74033A9F22486169007CCB1E /* FancyButton.swift */,
+				7444D9CA224041BB006E1638 /* LogMessage.swift */,
+				74033AA2224862B9007CCB1E /* GradientView.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -103,19 +119,17 @@
 		747D8704223E8FCA0066F56D /* Risk Management Tool */ = {
 			isa = PBXGroup;
 			children = (
+				74033AA1224861D7007CCB1E /* Delegates */,
 				7481E1502246611A009D2392 /* Controllers */,
 				7481E14D22465DE7009D2392 /* Services */,
-				7444D9C7224041BA006E1638 /* AppDelegate.swift */,
 				7444D9C4224041BA006E1638 /* Assets.xcassets */,
 				7444D9D6224044B3006E1638 /* LaunchScreen.storyboard */,
 				7444D9D7224044B6006E1638 /* Main.storyboard */,
 				7444D9C6224041BA006E1638 /* GoogleService-Info.plist */,
 				7444D9CB224041BB006E1638 /* Info.plist */,
-				7444D9CA224041BB006E1638 /* LogMessage.swift */,
 				740828C722457D63008EDFBF /* Domain */,
 				740828C322456EA4008EDFBF /* RiskTableViewCell.swift */,
 				740828C422456EA4008EDFBF /* RiskTableViewCell.xib */,
-				7493F59B2246B84F007F6CD1 /* RiskCellDelegator.swift */,
 			);
 			path = "Risk Management Tool";
 			sourceTree = "<group>";
@@ -289,10 +303,12 @@
 				7444D9D0224041BB006E1638 /* AppDelegate.swift in Sources */,
 				7444D9D2224041BB006E1638 /* RegisterRMVCViewController.swift in Sources */,
 				7493F59A2246AED5007F6CD1 /* Constatnts.swift in Sources */,
+				74033AA3224862B9007CCB1E /* GradientView.swift in Sources */,
 				7444D9D3224041BB006E1638 /* LogMessage.swift in Sources */,
 				7444D9D1224041BB006E1638 /* LogInRMVC.swift in Sources */,
 				7481E14A22463ECD009D2392 /* UserService.swift in Sources */,
 				7481E144224637EB009D2392 /* NewRiskVC.swift in Sources */,
+				74033AA02248616A007CCB1E /* FancyButton.swift in Sources */,
 				7493F59C2246B84F007F6CD1 /* RiskCellDelegator.swift in Sources */,
 				740339C92247DF13007CCB1E /* Extensions.swift in Sources */,
 				7481E14C22465B54009D2392 /* ImageService.swift in Sources */,

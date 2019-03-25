@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="LogInRMVC" id="BYZ-38-t0r" customClass="LogInRMVC" customModule="Risk_Management_Tool" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="Risk_Management_Tool" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -32,14 +32,18 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTT-6A-WRH">
                                 <rect key="frame" x="166.5" y="186" width="42" height="30"/>
-                                <state key="normal" title="Log In"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onLogInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dPN-qJ-DbN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnW-eB-5rG">
                                 <rect key="frame" x="159" y="221" width="57" height="30"/>
-                                <state key="normal" title="Register"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="0.95051451470000003" green="0.97090153850000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="efP-xj-YY1" kind="show" id="rje-k4-jhB"/>
                                 </connections>
@@ -68,6 +72,20 @@
                             <constraint firstItem="S9t-uG-REK" firstAttribute="leading" secondItem="UaH-Rr-JYp" secondAttribute="leading" constant="16" id="zBY-xi-4gv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UaH-Rr-JYp"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.014818117022514343" green="0.66120761632919312" blue="0.95638352632522583" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.27058823529411763" green="0.40784313725490196" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.69019607843137254" green="0.41568627450980389" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="userEmail" destination="Ny9-tY-3RY" id="fDS-Zu-uh2"/>
@@ -82,7 +100,7 @@
         <scene sceneID="A3X-bU-STG">
             <objects>
                 <viewController id="efP-xj-YY1" customClass="RegisterRMVCViewController" customModule="Risk_Management_Tool" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1fm-i5-4IC">
+                    <view key="view" contentMode="scaleToFill" id="1fm-i5-4IC" customClass="GradientView" customModule="Risk_Management_Tool" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -98,7 +116,9 @@
                                     <constraint firstAttribute="height" constant="184" id="3oy-PH-NVS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Tap to set profile image"/>
+                                <state key="normal" title="Tap to set profile image">
+                                    <color key="titleColor" red="0.95051451470000003" green="0.97090153850000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="91D-aa-MON">
                                 <rect key="frame" x="109" y="90.5" width="157" height="157"/>
@@ -121,14 +141,18 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="754" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exi-b6-SJf">
                                 <rect key="frame" x="159" y="473.5" width="57" height="30"/>
-                                <state key="normal" title="Register"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="0.95051451470000003" green="0.97090153850000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onRegisterAction:" destination="efP-xj-YY1" eventType="touchUpInside" id="oop-UZ-68F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxX-QQ-orx">
                                 <rect key="frame" x="166.5" y="513.5" width="42" height="30"/>
-                                <state key="normal" title="Log In"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.95051451470000003" green="0.97090153850000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="i87-F7-PiQ"/>
                                 </connections>
@@ -174,6 +198,14 @@
                             <constraint firstItem="Q2W-xo-Y62" firstAttribute="leading" secondItem="Apx-bp-Y7c" secondAttribute="leading" constant="76" id="za8-L2-2YN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Apx-bp-Y7c"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.27058823529999998" green="0.40784313729999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.69019607839999997" green="0.41568627450000001" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="changeImage" destination="Q2W-xo-Y62" id="5at-PH-Q6q"/>
