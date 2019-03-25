@@ -120,14 +120,25 @@ class LogOutRMVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         let indexPath = IndexPath(row: tappedIndexPath.row, section: 0)
         self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
         let riskViewController = self.storyboard?.instantiateViewController(withIdentifier: "RiskVC") as! RiskVC
-        let chosenRisk = risks[tappedIndexPath.row]
-        riskViewController.riskAnalysis = chosenRisk.risksLevel
-        riskViewController.riskTitle = chosenRisk.title
-        riskViewController.riskDescription = chosenRisk.description
-        riskViewController.riskAuthor = chosenRisk.author.username
-        riskViewController.imageURL = chosenRisk.author.photoURL
+        if isFiltering() {
+            let chosenRisk = filteredRisks[tappedIndexPath.row]
+            riskViewController.riskAnalysis = chosenRisk.risksLevel
+            riskViewController.riskTitle = chosenRisk.title
+            riskViewController.riskDescription = chosenRisk.description
+            riskViewController.riskAuthor = chosenRisk.author.username
+            riskViewController.imageURL = chosenRisk.author.photoURL
+            
+            self.navigationController?.pushViewController(riskViewController, animated: true)
+        } else {
+            let chosenRisk = risks[tappedIndexPath.row]
+            riskViewController.riskAnalysis = chosenRisk.risksLevel
+            riskViewController.riskTitle = chosenRisk.title
+            riskViewController.riskDescription = chosenRisk.description
+            riskViewController.riskAuthor = chosenRisk.author.username
+            riskViewController.imageURL = chosenRisk.author.photoURL
         
-        self.navigationController?.pushViewController(riskViewController, animated: true)
+            self.navigationController?.pushViewController(riskViewController, animated: true)
+        }
     }
     
     func fetchRisks() {
